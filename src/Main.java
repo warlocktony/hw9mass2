@@ -19,10 +19,10 @@ public class Main {
 
     public static void task1() {
         System.out.println("task 1");
-        int[] arr = generateRandomArray();
+        int[] budget = generateRandomArray();
         int allMonthCash = 0;
-        for (int i = 0; i < arr.length; i++) {
-            allMonthCash += arr[i];
+        for (int i = 0; i < budget.length; i++) {
+            allMonthCash += budget[i];
 
         }
 
@@ -33,32 +33,32 @@ public class Main {
 
     public static void task2() {
         System.out.println("task 2");
-        int[] arr = generateRandomArray();
-        int maxCash = arr[0];
-        int minCash = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > maxCash) {
-                maxCash = arr[i];
+        int[] budget = generateRandomArray();
+        int maxCash = budget[0];
+        int minCash = budget[0];
+        for (int i = 0; i < budget.length; i++) {
+            if (budget[i] > maxCash) {
+                maxCash = budget[i];
             }
-            if (arr[i] < minCash) {
-                minCash = arr[i];
+            if (budget[i] < minCash) {
+                minCash = budget[i];
             }
         }
-        System.out.println("minimal summa spend mony for a day equal " + maxCash + " RUB.Maximal summa spend mony for a day equal " + minCash + " RUB");
+        System.out.println("minimal summa spend mony for a day equal " + minCash + " RUB.Maximal summa spend mony for a day equal " + maxCash + " RUB");
 
 
     }
 
     public static void task3() {
         System.out.println("task 3");
-        int[] arr = generateRandomArray();
+        int[] budget = generateRandomArray();
 
-        int allMonthCash = 0;
-        for (int i = 0; i < arr.length; i++) {
-            allMonthCash += arr[i];
+        double allMonthCash = 0;
+        for (int i = 0; i < budget.length; i++) {
+            allMonthCash += budget[i];
         }
-        int dayInMonth = 30;
-        double midleCash = allMonthCash / dayInMonth;
+
+        double midleCash = allMonthCash / budget.length;
 
 
         System.out.println("midle summa spend mony for month equal " + midleCash + " RUB");
@@ -67,7 +67,7 @@ public class Main {
     public static void task4() {
         System.out.println("task 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1 ; i >= 0 ; i --){
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
             if (i != 0) {
                 System.out.print(", ");
@@ -75,8 +75,6 @@ public class Main {
         }
 
 
-
-
-        }
-
     }
+
+}
